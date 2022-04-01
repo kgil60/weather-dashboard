@@ -128,13 +128,13 @@ function formSubmitHandler(event) {
 
     let queryCity = cityInputEl.value.trim();
     let queryState = "";
-    let apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${queryCity}&appid=${apiKey}`;
+    let apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${queryCity}&appid=16ab894e10db2a2a8272018bd00da3f4`;
 
     if (cityInputEl.value.includes(",")) {
         const inputValue = cityInputEl.value.split(",");
         queryCity = inputValue[0];
         queryState = inputValue[1];
-        apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${queryCity},${queryState}&appid=${apiKey}`;
+        apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${queryCity},${queryState}&appid=16ab894e10db2a2a8272018bd00da3f4`;
     }
 
     fetch (apiUrl).then(function(response) {
