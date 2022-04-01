@@ -44,7 +44,7 @@ function displayWeather(data, cit) {
 
     // create and append elements
     const cityEl = document.createElement("h2");
-    cityEl.innerHTML = `${city} (${moment().format("M/DD/YYYY")})<img src="http://openweathermap.org/img/wn/${data.current.weather[0].icon}.png">`;
+    cityEl.innerHTML = `${city} (${moment().format("M/DD/YYYY")})<img src="https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png">`;
     currentDayEl.appendChild(cityEl);
 
     const tempEl = document.createElement("p");
@@ -128,13 +128,13 @@ function formSubmitHandler(event) {
 
     let queryCity = cityInputEl.value.trim();
     let queryState = "";
-    let apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${queryCity}&appid=16ab894e10db2a2a8272018bd00da3f4`;
+    let apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${queryCity}&appid=16ab894e10db2a2a8272018bd00da3f4`;
 
     if (cityInputEl.value.includes(",")) {
         const inputValue = cityInputEl.value.split(",");
         queryCity = inputValue[0];
         queryState = inputValue[1];
-        apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${queryCity},${queryState}&appid=16ab894e10db2a2a8272018bd00da3f4`;
+        apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${queryCity},${queryState}&appid=16ab894e10db2a2a8272018bd00da3f4`;
     }
 
     fetch (apiUrl).then(function(response) {
