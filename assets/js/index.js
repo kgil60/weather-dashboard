@@ -1,4 +1,4 @@
-import apiKey from "./api-key";
+import { apiKey } from "./api-key.js";
 
 let searchHistory = JSON.parse(localStorage.getItem("search-history"))
 if (!searchHistory) {
