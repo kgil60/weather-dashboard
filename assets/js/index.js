@@ -1,5 +1,3 @@
-import { apiKey } from "./api-key.js";
-
 let searchHistory = JSON.parse(localStorage.getItem("search-history"))
 if (!searchHistory) {
     searchHistory = [];
@@ -11,7 +9,7 @@ const searchFormEl = document.getElementById("search-form");
 const historyEl = document.getElementById("search-history");
 
 function getWeatherData(lat, lon, d) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${apiKey}&units=imperial`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=16ab894e10db2a2a8272018bd00da3f4&units=imperial`;
 
     let city = d[0].name;
 
