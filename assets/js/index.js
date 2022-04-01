@@ -1,9 +1,10 @@
+import apiKey from "./api-key";
+
 let searchHistory = JSON.parse(localStorage.getItem("search-history"))
 if (!searchHistory) {
     searchHistory = [];
 }
 
-const apiKey = "16ab894e10db2a2a8272018bd00da3f4";
 const mainContentEl = document.getElementById("weather-dashboard");
 const cityInputEl = document.getElementById("city");
 const searchFormEl = document.getElementById("search-form");
