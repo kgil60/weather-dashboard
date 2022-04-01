@@ -100,7 +100,7 @@ function displayFiveDay(data, weatherDisplay) {
         const dateEl = document.createElement("h4");
         dateEl.textContent = date
         const iconEl = document.createElement("img");
-        iconEl.setAttribute("src", `http://openweathermap.org/img/wn/${dailyWeather[i].weather[0].icon}.png`);
+        iconEl.setAttribute("src", `https://openweathermap.org/img/wn/${dailyWeather[i].weather[0].icon}.png`);
         const tempEl = document.createElement("p");
         tempEl.textContent = `Temp: ${dailyWeather[i].temp.day}°F`;
         const windEl = document.createElement("p");
